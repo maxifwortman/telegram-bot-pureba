@@ -1,0 +1,20 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "simple pooling bot js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "telegram"
+  ],
+  "author": "Fx",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "pending-xhr-puppeteer": "^2.3.2"
+  }
+}
