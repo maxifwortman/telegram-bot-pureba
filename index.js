@@ -2,14 +2,19 @@ const { Telegraf } = require("telegraf");
 const axios = require("axios");
 const cheerio = require("cheerio");
 //const puppeteer=require("puppeteer");
+const cron = require("node-cron");
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf("1093840907:AAHd8jvFLeR0kgOVmHXoCDbw2xqgAYRGMWU");
 
 const url = ('https://www.dolar.blue/')
 const urlBtc = ('https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD')
 let oficial=[];
 let blue=[];
 let btcPrice='';
+
+cron.schedule("*/5 * * * * *", function() {
+      console.log("running a task every 5 seconds");
+});
 
 bot.start(ctx => {
   ctx.reply("Bienvenido! Elegi /dolar_blue, /dolar_oficial o /btc");
